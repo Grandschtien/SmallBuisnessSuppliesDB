@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,30 @@ namespace SmallBuisnessSupplies
     /// </summary>
     public partial class MainWindow : Window
     {
+        const string connectionString = @"Data Source=.\;Initial Catalog=SmallBusinessSupplies;Integrated Security=True";
+        SqlDataAdapter adapter;
+        DataTable ClientsTable;
         public MainWindow()
         {
             InitializeComponent();
+            DeportamentsView();
         }
+        private void DeportamentsView()
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            connection.Open();
+            string cmd = "SELECT * FROM Clients"; // Из какой таблицы нужен вывод 
+            SqlCommand createCommand = new SqlCommand(cmd, connection);
+            createCommand.ExecuteNonQuery();
+
+            SqlDataAdapter dataAdp = new SqlDataAdapter(createCommand);
+            DataTable dt = new DataTable("Clients"); // В скобках указываем название таблицы
+            dataAdp.Fill(dt);
+            ClientsGrid.ItemsSource = dt.DefaultView; // Сам вывод 
+            connection.Close();
+
+        }
+
     }
 }

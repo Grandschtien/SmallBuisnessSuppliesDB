@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:SmallBuisnessSupplies"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="20 8 20 8" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="30" />
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <DataGrid   HorizontalAlignment="Center" Height="302" Margin="10,10,10,10" 
+                    VerticalAlignment="Top" Width="700" AutoGenerateColumns="True"
+                    Name="ClientsGrid">
+        </DataGrid>
+
     </Grid>
 </Window>
