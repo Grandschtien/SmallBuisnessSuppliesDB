@@ -17,35 +17,59 @@ using System.Windows.Shapes;
 
 namespace SmallBuisnessSupplies
 {
+
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        const string connectionString = @"Data Source=.\;Initial Catalog=SmallBusinessSupplies;Integrated Security=True";
-        SqlDataAdapter adapter;
-        DataTable ClientsTable;
+        //const string connectionString = @"Data Source=.\;Initial Catalog=SmallBusinessSupplies;Integrated Security=True";
         public MainWindow()
         {
             InitializeComponent();
-            DeportamentsView();
         }
-        private void DeportamentsView()
+
+        private void Clients_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection connection = new SqlConnection(connectionString);
-
-            connection.Open();
-            string cmd = "SELECT * FROM Clients"; // Из какой таблицы нужен вывод 
-            SqlCommand createCommand = new SqlCommand(cmd, connection);
-            createCommand.ExecuteNonQuery();
-
-            SqlDataAdapter dataAdp = new SqlDataAdapter(createCommand);
-            DataTable dt = new DataTable("Clients"); // В скобках указываем название таблицы
-            dataAdp.Fill(dt);
-            ClientsGrid.ItemsSource = dt.DefaultView; // Сам вывод 
-            connection.Close();
-
+            Clients clients = new Clients();
+            clients.Show();
+              
         }
 
+        private void Orders_Click(object sender, RoutedEventArgs e)
+        {
+            Orders orders = new Orders();
+            orders.Show();
+        }
+
+        private void Details_Click(object sender, RoutedEventArgs e)
+        {
+            Details details = new Details();
+            details.Show();
+        }
+
+        private void Employee_Click(object sender, RoutedEventArgs e)
+        {
+            Emloyees emp = new Emloyees();
+            emp.Show();
+        }
+
+        private void Catalog_Click(object sender, RoutedEventArgs e)
+        {
+            Catalog catalog = new Catalog();
+            catalog.Show();
+        }
+
+        private void Stocks_Click(object sender, RoutedEventArgs e)
+        {
+            Stocks stocks = new Stocks();
+            stocks.Show();
+        }
+
+        private void Providers_Click(object sender, RoutedEventArgs e)
+        {
+            Providers prv = new Providers();
+            prv.Show();
+        }
     }
 }
