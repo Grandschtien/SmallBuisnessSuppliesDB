@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="79ca29bd6eb6463d9a249f810d1046c9" Name="Diagram1">
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.Clients" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.Employees" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.OrderDetails" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.Orders" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.ProductCatalog" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.Providers" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.Stocks" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.VW_ClientOrder" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.VW_EmployeeOrder" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.VW_Orders" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmallBusinessSuppliesModel.VW_ProductsCatalog" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="SmallBusinessSuppliesModel.FK_Orders_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="SmallBusinessSuppliesModel.FK_Orders_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="SmallBusinessSuppliesModel.FK_OrderDetails_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="SmallBusinessSuppliesModel.FK_OrderDetails_Stocks" ManuallyRouted="false" />
+        <AssociationConnector Association="SmallBusinessSuppliesModel.FK_Stocks_ProductCatalog" ManuallyRouted="false" />
+        <AssociationConnector Association="SmallBusinessSuppliesModel.FK_Stocks_Providers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

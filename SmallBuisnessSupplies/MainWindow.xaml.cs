@@ -29,47 +29,10 @@ namespace SmallBuisnessSupplies
             InitializeComponent();
         }
 
-        private void Clients_Click(object sender, RoutedEventArgs e)
+        private void buff_Button(object sender, RoutedEventArgs e)
         {
-            Clients clients = new Clients();
-            clients.Show();
-              
-        }
-
-        private void Orders_Click(object sender, RoutedEventArgs e)
-        {
-            Orders orders = new Orders();
-            orders.Show();
-        }
-
-        private void Details_Click(object sender, RoutedEventArgs e)
-        {
-            Details details = new Details();
-            details.Show();
-        }
-
-        private void Employee_Click(object sender, RoutedEventArgs e)
-        {
-            Emloyees emp = new Emloyees();
-            emp.Show();
-        }
-
-        private void Catalog_Click(object sender, RoutedEventArgs e)
-        {
-            Catalog catalog = new Catalog();
-            catalog.Show();
-        }
-
-        private void Stocks_Click(object sender, RoutedEventArgs e)
-        {
-            Stocks stocks = new Stocks();
-            stocks.Show();
-        }
-
-        private void Providers_Click(object sender, RoutedEventArgs e)
-        {
-            Providers prv = new Providers();
-            prv.Show();
+            ClientsOrdersTable COT = new ClientsOrdersTable();
+            COT.Show();
         }
     }
 }

@@ -13,5 +13,6 @@ namespace SmallBuisnessSupplies
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

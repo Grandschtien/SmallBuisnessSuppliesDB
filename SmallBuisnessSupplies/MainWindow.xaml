@@ -16,13 +16,13 @@
     <Grid Margin="0,0,5,-27.5">
         <Label Content="Шкарин Егор ИУ5-45Б"  Margin="275,15,275,0"  VerticalAlignment="Top" Height="40" Width="240" FontSize="20" />
         <StackPanel HorizontalAlignment="Left" Height="292" Margin="31,95,0,0" VerticalAlignment="Top" Width="165">
-            <Button Content="Клиенты"  Margin="10" Width="Auto" d:LayoutOverrides="Height" Click="Clients_Click"/>
-            <Button Content="Заказы" Margin="0" Width="Auto" d:LayoutOverrides="Height" Click="Orders_Click"/>
-            <Button Content="Детали заказа" Margin="10" Width="Auto" Click="Details_Click"/>
-            <Button Content="Сотрудники" Margin="0" Width="Auto" Click="Employee_Click"/>
-            <Button Content="Каталог" Margin="10" Width="Auto" Click="Catalog_Click"/>
-            <Button Content="Склады" Margin="0" Width="Auto" d:LayoutOverrides="Height" Click="Stocks_Click"/>
-            <Button Content="Поставщики" Margin="10" Width="Auto" d:LayoutOverrides="Height" Click="Providers_Click"/>
+            <Button Content="Клиенты"  Margin="10" Width="Auto" d:LayoutOverrides="Height" Click="buff_Button"/>
+            <Button Content="Заказы" Margin="0" Width="Auto" d:LayoutOverrides="Height" />
+            <Button Content="Детали заказа" Margin="10" Width="Auto" />
+            <Button Content="Сотрудники" Margin="0" Width="Auto" />
+            <Button Content="Каталог" Margin="10" Width="Auto" />
+            <Button Content="Склады" Margin="0" Width="Auto" d:LayoutOverrides="Height" />
+            <Button Content="Поставщики" Margin="10" Width="Auto" d:LayoutOverrides="Height" />
         </StackPanel>
         <Label Content="Таблицы" HorizontalAlignment="Left"  Margin="61,60,0,0" VerticalAlignment="Top" Width="100" Height="30" HorizontalContentAlignment="Center" />
         <StackPanel HorizontalAlignment="Left" Height="292" Margin="275,95,0,0" VerticalAlignment="Top" Width="165">
