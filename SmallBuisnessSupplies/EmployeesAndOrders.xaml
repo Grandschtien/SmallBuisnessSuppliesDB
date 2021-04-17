@@ -1,0 +1,25 @@
+﻿<Window x:Class="SmallBuisnessSupplies.EmployeesAndOrders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmallBuisnessSupplies"
+        mc:Ignorable="d"
+        Title="Сотрудники и заказы" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="vW_EmployeeOrderViewSource" d:DesignSource="{d:DesignInstance {x:Type local:VW_EmployeeOrder}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource vW_EmployeeOrderViewSource}">
+        <DataGrid x:Name="vW_EmployeeOrderDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="172,35,173,187.5" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="firstNameColumn" Binding="{Binding FirstName}" Header="Имя" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="lastNameColumn" Binding="{Binding LastName}" Header="Фамилия" Width="auto"/>
+                <DataGridTextColumn x:Name="middleNameColumn" Binding="{Binding MiddleName}" Header="Отчество" Width="auto"/>
+                <DataGridTextColumn x:Name="invoiceNumberColumn" Binding="{Binding InvoiceNumber}" Header="Номер накладной" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="positionColumn" Binding="{Binding Position}" Header="Должность" Width="auto"/>
+                <DataGridTextColumn x:Name="totalAmountColumn" Binding="{Binding TotalAmount}" Header="Сумма заказа" Width="auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

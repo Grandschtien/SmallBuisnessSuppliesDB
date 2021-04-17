@@ -29,10 +29,28 @@ namespace SmallBuisnessSupplies
             InitializeComponent();
         }
 
-        private void buff_Button(object sender, RoutedEventArgs e)
+        private void ClientsOrdersButton(object sender, RoutedEventArgs e)
         {
             ClientsOrdersTable COT = new ClientsOrdersTable();
             COT.Show();
+        }
+
+        private void EmployeeButton(object sender, RoutedEventArgs e)
+        {
+            EmployeesAndOrders emp = new EmployeesAndOrders();
+            emp.Show();
+        }
+
+        private void OrdersButton(object sender, RoutedEventArgs e)
+        {
+            OrderDetails orders = new OrderDetails();
+            orders.Show();
+        }
+
+        private void CatalogButton(object sender, RoutedEventArgs e)
+        {
+            Catalog catalog = new Catalog();
+            catalog.Show();
         }
     }
 }

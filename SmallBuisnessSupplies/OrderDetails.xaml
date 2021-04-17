@@ -1,0 +1,31 @@
+﻿<Window x:Class="SmallBuisnessSupplies.OrderDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmallBuisnessSupplies"
+        mc:Ignorable="d"
+        Title="OrderDetails" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="vW_OrdersViewSource" d:DesignSource="{d:DesignInstance {x:Type local:VW_Orders}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource vW_OrdersViewSource}">
+        <DataGrid x:Name="vW_OrdersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="135,10,115,212.5" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn x:Name="dateColumn" Header="Дата" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding Date, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn x:Name="invoiceNumberColumn" Binding="{Binding InvoiceNumber}" Header="Номер накладной" Width="auto"/>
+                <DataGridTextColumn x:Name="prCostColumn" Binding="{Binding PrCost}" Header="Цена" Width="auto"/>
+                <DataGridTextColumn x:Name="productNameColumn" Binding="{Binding ProductName}" Header="Название" Width="auto"/>
+                <DataGridTextColumn x:Name="quantityColumn" Binding="{Binding Quantity}" Header="Количество" Width="auto"/>
+                <DataGridTextColumn x:Name="totalAmountColumn" Binding="{Binding TotalAmount}" Header="Общая сумма" Width="auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
